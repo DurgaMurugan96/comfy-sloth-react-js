@@ -47,7 +47,7 @@ export default function Cart() {
                 cartItems?.length ? <>
                     {/* <TitleCart /> */}
                     <Breadcrumbs pages={'cart'} />
-                    <table className='container display_container bg-dark '>
+                    <table className='container display_container bg-dark productsseres '>
                         <thead>
                             <tr className='heading_style'>
                                 <th style={{ marginLeft: "25%", display: "grid" }}>Item</th>
