@@ -1,0 +1,17 @@
+.Footer_style {
+    background-color: rgb(34, 34, 34);
+    padding: 2%;
+    color: white;
+}
+
+.Footer_style h5 {
+    margin-left: 38%;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    line-height: 20px;
+}
+
+h5 span {
+    color: #ab7a5f;
+}

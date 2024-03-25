@@ -1,0 +1,25 @@
+.company_style1 {
+    margin-left: 21%;
+    margin-bottom: 1.25rem !important;
+}
+
+.company_style1 {
+    background: transparent;
+    border-radius: 0.25em;
+    font-size: 13.3333px;
+    border-color: transparent;
+    padding: 0.25rem;
+}
+
+.company_style1 h5 {
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    line-height: 20px;
+}
+
+.company-filter {
+    background-color: #f1f5f8;
+    border: none;
+    border-radius: 5px;
+    padding: 4px;
+}

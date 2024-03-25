@@ -1,0 +1,27 @@
+.header2 {
+    background-color: #eaded7;
+    min-height: 20vh !important;
+    margin-top: -1%;
+    display: flex;
+    align-items: center;
+}
+
+.titles {
+    color: rgb(69, 50, 39);
+    margin-left: 6%;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    line-height: 32px;
+    text-transform: capitalize;
+}
+
+.title2 {
+    color: rgb(121, 87, 68);
+}
+
+
+
+.title2:hover {
+    color: rgb(69, 50, 39);
+}

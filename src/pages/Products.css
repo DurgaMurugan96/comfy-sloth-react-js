@@ -1,0 +1,136 @@
+.img1 {
+    width: 100%;
+    height: 175px;
+    display: block;
+    object-fit: cover;
+}
+
+.name {
+    color: rgb(16, 42, 66);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.price {
+    color: rgb(171, 122, 95);
+    margin-left: 80%;
+    margin-top: -13%;
+}
+
+
+.column_Home {
+    display: grid;
+    padding-bottom: 5%;
+    /* grid-template-columns: 0.2fr 1fr !important; */
+}
+
+
+
+/* Category css */
+
+.category_style {
+    margin-top: 4%;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    line-height: 20px;
+    margin-left: 22%;
+    text-transform: capitalize;
+    font-size: .875rem;
+
+}
+
+.category_style h5 {
+    font-size: 16px;
+    color: rgb(16, 42, 66);
+}
+
+.active {
+    border-bottom: 1px solid rgb(97, 125, 152);
+
+}
+
+button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 13.3333px;
+    color: rgb(97, 125, 152);
+    margin: 0.25em 0px;
+    padding: 0.25rem 0px;
+    cursor: pointer;
+}
+
+/* price */
+
+.price_style {
+    margin-left: 21%;
+    margin-bottom: 1.25rem !important;
+}
+
+.price_style .Price_s {
+    font-size: 16px !important;
+    color: rgb(16, 42, 66) !important;
+    font-weight: 500;
+    letter-spacing: 1.6px;
+    line-height: 20px;
+}
+
+.Rupees_style {
+    color: rgb(50, 77, 103);
+}
+
+.control-form {
+    width: 300px;
+    margin-top: 22%;
+}
+
+.column_Home {
+    display: flex;
+    grid-template-columns: 200px 1fr;
+}
+
+.fixed-column {
+    height: 110vh;
+    flex: 0 0 auto;
+    width: 250px;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+.scrolling-column {
+    overflow-y: auto;
+    padding: 10px;
+    height: 110vh;
+    width: 100%;
+    margin-left: 3%;
+}
+
+.scrolling-column::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.scrolling-column::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.scrolling-column::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border: none;
+}
+
+
+.product_sort {
+    margin-top: 5%;
+}
+
+/* grid and list view */
+
+.view_change_btn {
+    margin-top: 15px;
+}
+
+.line {
+    width: 36% !important;
+}

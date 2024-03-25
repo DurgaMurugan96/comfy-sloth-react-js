@@ -1,0 +1,132 @@
+.SinglePage {
+    overflow-x: hidden;
+}
+
+.product_name {
+    color: rgb(16, 42, 66);
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.back_button {
+    background-color: rgb(171, 122, 95);
+}
+
+.product_S {
+    margin-top: 5%;
+    margin-left: 3% !important;
+    padding-bottom: 5%;
+}
+
+.pictures_s {
+    margin-top: 4%;
+    border-radius: 1%;
+}
+
+.Details {
+    margin-top: 5%;
+}
+
+.product-info {
+    margin-top: -3%;
+}
+
+.reviews {
+    color: rgb(50, 77, 103);
+    margin-top: 3%;
+}
+
+.style_C {
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.price_S {
+    color: rgb(171, 122, 95);
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: -1%;
+}
+
+.description_S {
+    color: rgb(50, 77, 103);
+    font-size: 16px;
+    line-height: 2;
+    /* max-width: 45em; */
+}
+
+.info span {
+    color: rgb(50, 77, 103);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 24px;
+}
+
+.info {
+    grid-template-columns: 125px 1fr;
+    display: grid;
+}
+
+.Picture {
+    border-radius: 5px;
+    margin-top: 5%;
+}
+
+.Details .sign {
+    margin-top: -3%;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    margin-left: 3%;
+}
+
+.Details .number {
+    font-weight: 400;
+    color: rgb(16, 42, 66);
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    line-height: 40px;
+    margin-left: 3%;
+}
+
+.Symbol {
+    padding-bottom: 2%;
+}
+
+/* button */
+
+.button-link_C {
+    background: rgb(171, 122, 95);
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+.button-link_C:hover {
+    background-color: #c5a491;
+    color: #453227;
+}
+
+.Fa_style {
+    margin-top: 50%;
+    margin-left: 55%;
+    color: white;
+    font-size: 90%;
+}
+
+/*  */
+
+.Single_Page .product-center {
+    display: grid;
+    gap: 4rem;
+    margin-top: 2rem;
+}

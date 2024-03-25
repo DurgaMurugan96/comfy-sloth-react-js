@@ -1,0 +1,17 @@
+.button_style {
+    background-color: rgb(171, 122, 95);
+    color: white;
+    padding: 10px 12px 10px 12px;
+    border-radius: 0.25rem;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    line-height: 21px;
+    text-decoration: none;
+    margin-left: 2%;
+}
+
+.button_style:hover {
+    background-color: #c5a491;
+    color: #453227;
+}

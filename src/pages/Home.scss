@@ -1,0 +1,357 @@
+.HomePage {
+    overflow-x: hidden;
+}
+
+.Home_pic {
+    margin-top: 6%;
+    height: 550px;
+    width: 100%;
+    border-radius: 0.25rem;
+    object-fit: cover;
+    margin-left: 43%;
+    position: relative;
+}
+
+.Home_pic2 {
+    width: 250px;
+    height: 165.25px;
+    position: absolute;
+    margin-top: -13%;
+    margin-left: 5%;
+    border-radius: 0.25rem;
+}
+
+.Home_content {
+    margin-top: 12%;
+    margin-left: -3% !important;
+}
+
+.Home_content h1 {
+    color: rgb(16, 42, 66);
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 48px;
+    margin-bottom: 2rem;
+    letter-spacing: 1.6px;
+}
+
+.Home_content p {
+    font-size: 20px;
+    line-height: 40px;
+    max-width: 900px;
+    color: rgb(97, 125, 152);
+}
+
+.Home_content .button-btn {
+    margin-top: 3%;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: rgb(171, 122, 95);
+    letter-spacing: 1.6px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 5px;
+    color: white;
+    margin-left: -3px;
+    text-decoration: none;
+}
+
+.Home_content .button-btn:hover {
+    background-color: #c5a491;
+    color: #453227;
+}
+
+.color_home {
+    content: "";
+    position: absolute;
+    width: 11%;
+    height: 69%;
+    background-color: #decbc0;
+    border-radius: 0.25rem;
+    bottom: 0%;
+    left: -8%;
+    margin-left: 64%;
+}
+
+.features {
+    background-color: rgb(241, 245, 248);
+    padding-bottom: 6%;
+
+}
+
+.features h2 {
+    margin-left: 35%;
+    color: rgb(16, 42, 66);
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    line-height: 40px;
+    text-transform: capitalize;
+    padding-top: 5%;
+}
+
+.underline_Home {
+    border-bottom: 5px solid #ab7a5f;
+    height: 0.25rem;
+    width: 6rem;
+    margin-left: 46%;
+}
+
+
+.images {
+    padding-top: 5%;
+    gap: 3%;
+    margin-left: 5%;
+}
+
+.image_container {
+    border-radius: 0.25rem;
+}
+
+.images_f {
+    object-fit: cover;
+    width: 363.328px;
+    height: 225px;
+    border-radius: 0.25rem;
+    padding-bottom: 2%;
+}
+
+.names,
+.prices {
+    padding-bottom: 15%;
+}
+
+.names {
+    color: rgb(16, 42, 66);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    line-height: 20px;
+}
+
+.prices {
+    color: rgb(171, 122, 95);
+
+}
+
+.name_home {
+    padding-bottom: 3%;
+}
+
+.features .button2 {
+    margin-left: 45%;
+    background-color: rgb(171, 122, 95);
+    color: #eaded7;
+    padding: 10px 15px 10px 15px;
+    border-radius: 0.25rem;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button2:hover {
+    background-color: #c5a491;
+    color: #453227;
+}
+
+.custom {
+    padding-top: 6%;
+    background-color: rgb(234, 222, 215);
+    width: 1297px;
+    height: 461px;
+}
+
+.custom .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.custom h3 {
+    color: rgb(69, 50, 39);
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    line-height: 32px;
+    margin-left: 10%;
+    padding-bottom: 15%;
+}
+
+.custom p {
+    color: rgb(121, 87, 68);
+    font-size: 16px;
+    line-height: 28.8px;
+    margin-top: -9%;
+}
+
+.card .custom_p {
+    color: rgb(121, 87, 68);
+    font-size: 16px;
+    line-height: 28.8px;
+    text-align: center;
+}
+
+.custom h4 {
+    color: #453227;
+    text-align: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: -1%;
+}
+
+// .card-container .container {
+//     // max-width: 1184px;
+//     max-width: 1192px !important;
+// }
+
+.card-container .card {
+    background-color: #c5a491;
+    border-color: #eaded7;
+}
+
+.card p {
+    margin-top: -9%;
+    margin-bottom: 5%;
+    padding: 30px 20px 30px 20px;
+}
+
+.icons {
+    width: 4rem;
+    height: 4rem;
+    margin: 0px auto 1rem;
+    place-items: center;
+    border-radius: 50%;
+    background-color: #eaded7;
+}
+
+.card .icons {
+    margin-top: 10% !important;
+
+}
+
+.logo {
+    margin-top: 25%;
+    margin-left: 25%;
+    color: rgb(69, 50, 39);
+}
+
+.image_container {
+    position: relative;
+    transition: all 300ms;
+
+    &:hover {
+        .absolute_bg {
+            opacity: 1;
+        }
+    }
+
+    .icon_container {
+        background-color: #ab7a5f;
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+            color: white;
+            font-size: 20px;
+
+        }
+    }
+
+
+    .absolute_bg {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+        background: linear-gradient(rgba(0, 0, 0, 0.315), rgba(0, 0, 0, 0.301));
+        width: 100%;
+        height: 219px;
+        opacity: 0;
+        transition: opacity 300ms;
+    }
+}
+
+
+// form
+.Home_page {
+    padding: 15rem 0px;
+}
+
+.section_center {
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.Home_page .content_HomePage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 8rem;
+    margin-top: 2rem;
+}
+
+.Home_page .contact_form {
+    width: 90vw;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.Home_page h3 {
+    color: rgb(16, 42, 66);
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    line-height: 32px;
+}
+
+.Home_page p {
+    color: rgb(97, 125, 152);
+    font-size: 16px;
+    line-height: 2;
+    max-width: 45em;
+}
+
+.Home_page .form-input {
+    border-right: none;
+    color: #324d67;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.Home_page .form-input {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid #222;
+}
+
+.Home_page .submit-btn {
+    background: #ab7a5f;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    color: #222;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid #222;
+}
+
+.submit-btn:hover {
+    background-color: #ab7a5f !important;
+    color: white !important;
+}

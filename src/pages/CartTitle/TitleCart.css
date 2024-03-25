@@ -1,0 +1,25 @@
+.header {
+    background-color: #eaded7;
+    min-height: 20vh !important;
+    margin-top: -1%;
+    display: flex;
+    align-items: center;
+}
+
+.title_c {
+    color: rgb(69, 50, 39);
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    line-height: 32px;
+    text-transform: capitalize;
+    margin-left: 6%;
+}
+
+.titleC {
+    color: rgb(121, 87, 68);
+}
+
+.titleC:hover {
+    color: rgb(69, 50, 39);
+}

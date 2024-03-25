@@ -1,0 +1,36 @@
+ .about_container .pic {
+     width: 125%;
+     border-radius: 0.25rem;
+     height: 500px;
+     object-fit: cover;
+     margin-left: -4%;
+ }
+
+ .about_container h2 {
+     font-size: 40px;
+     font-weight: 700;
+     letter-spacing: 1.6px;
+     line-height: 40px;
+     margin-top: 10% !important;
+     margin-left: 20%;
+ }
+
+ .about_container .underline {
+     border-bottom: 5px solid #ab7a5f;
+     height: 0.25rem;
+     width: 6rem;
+     margin-left: 20%;
+ }
+
+ .about_container p {
+     max-width: 45em;
+     margin: 2rem auto 0px;
+     line-height: 2;
+     color: #617d98;
+     margin-left: 20%;
+ }
+
+ .about_container .picture {
+     margin-top: 7% !important;
+     padding-bottom: 7%;
+ }

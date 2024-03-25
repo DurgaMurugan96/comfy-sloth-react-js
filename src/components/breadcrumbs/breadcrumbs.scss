@@ -1,0 +1,33 @@
+.breadcrumb_container {
+    background-color: #eaded7;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+
+    h1 {
+        font-size: 2rem;
+        color: rgb(121, 87, 68);
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .link {
+            text-decoration: none;
+            color: rgb(121, 87, 68);
+
+            &:hover {
+                color: rgb(69, 50, 39);
+            }
+
+        }
+
+        .active_link {
+            text-decoration: none;
+            color: rgb(69, 50, 39);
+        }
+    }
+
+}
