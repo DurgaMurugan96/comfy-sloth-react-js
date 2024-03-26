@@ -20,9 +20,9 @@ function Company({ onSelectCompany }) {
                     value={selectedCompany}
                     onChange={handleCompanyChange}>
                     <option value="">all</option>
-                    <option value="marcos">Marcos</option>
-                    <option value="liddy">Liddy</option>
-                    <option value="ikea">Ikea</option>
+                    <option value="marcos">marcos</option>
+                    <option value="liddy">liddy</option>
+                    <option value="ikea">ikea</option>
                     <option value="caressa">caressa</option>
                 </select>
             </form>
