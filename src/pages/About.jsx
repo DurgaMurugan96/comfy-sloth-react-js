@@ -1,4 +1,3 @@
-import Title2 from "./Title2";
 import './About.css'
 import Footer from "./Footer";
 import Breadcrumbs from "../components/breadcrumbs/breadcrumbs";

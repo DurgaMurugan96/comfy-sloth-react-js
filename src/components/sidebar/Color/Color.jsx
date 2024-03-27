@@ -17,7 +17,7 @@ export default function Color({ handleColorChange = () => { }, data = [] }) {
         handleColorChange(color)
     }
     return (
-        <div>
+        <div className='color_adjustment'>
             <h5 className='title16'>Colors</h5>
             <div className="d-flex align-items-center color_c gap-1">
                 <button className='btn1' onClick={() => handleColor('all')} >

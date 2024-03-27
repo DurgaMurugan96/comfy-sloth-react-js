@@ -29,6 +29,11 @@
     font-size: 16px;
     line-height: 24px;
     max-width: 720px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
 }
 
 .table1,
@@ -50,7 +55,7 @@
     margin-top: -20%;
 }
 
-.column{
+.column {
     display: grid;
     grid-template-columns: 0.2fr 1fr !important;
 }

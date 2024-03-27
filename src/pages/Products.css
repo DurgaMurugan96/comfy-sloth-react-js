@@ -92,10 +92,11 @@ button {
 .fixed-column {
     height: 110vh;
     flex: 0 0 auto;
-    width: 250px;
+    width: 220px;
     padding: 10px;
     position: sticky;
-    top: 0;
+    margin-top: 2%;
+    margin-left: 4%;
 }
 
 .scrolling-column {
@@ -103,7 +104,7 @@ button {
     padding: 10px;
     height: 110vh;
     width: 100%;
-    margin-left: 3%;
+    margin-top: 2%;
 }
 
 .scrolling-column::-webkit-scrollbar {
@@ -118,11 +119,6 @@ button {
 .scrolling-column::-webkit-scrollbar-thumb {
     background-color: transparent;
     border: none;
-}
-
-
-.product_sort {
-    margin-top: 5%;
 }
 
 /* grid and list view */

@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import './singleProduct.css';
 import BackButton from "../../BackButton";
-import TilteProduct from "../../TilteProduct";
 import Footer from "../../Footer";
 import { FaCheck } from 'react-icons/fa';
 import StarsRatings from "../../../components/stars/stars";
@@ -81,7 +80,6 @@ const SingleProduct = () => {
 
     return (
         <div className="SinglePage ">
-            {/* <TilteProduct /> */}
             <Breadcrumbs
                 pages={"products"}
                 subpage={singleProduct.name} />

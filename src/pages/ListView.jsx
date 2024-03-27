@@ -1,5 +1,6 @@
 import './Products.css'
 import './ListView.css';
+import { Link } from 'react-router-dom'
 
 function ListView({ data = [] }) {
     return (
@@ -21,7 +22,8 @@ function ListView({ data = [] }) {
                                                 <p className="name1">{user.name}</p>
                                                 <p className="price1"><span className="Doller_space">$</span>{user.price}</p>
                                                 <p className="description">{user.description}</p>
-                                                <p><button className="b-detail">Details</button></p>
+                                                <Link to={`/products/${user.id}`} className="b-detail" style={{ textDecoration: "none" }}>Details</Link>
+                                                {/* <p><button className="b-detail">Details</button></p> */}
                                             </td>
                                         </tr>
                                     </table>

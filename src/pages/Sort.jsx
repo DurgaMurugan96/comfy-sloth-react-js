@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-
-function Sort({ setFilteredData, data }) {
+import { useState } from 'react';
+function Sort({ setFilterProducts, data }) {
     const [sort, setSort] = useState('price-lowest');
 
     const updateSort = (e) => {
@@ -26,19 +25,22 @@ function Sort({ setFilteredData, data }) {
             default:
                 break;
         }
-        setFilteredData(sortedProducts);
+        setFilterProducts(sortedProducts);
     };
 
     return (
         <div>
             <form>
-                <label htmlFor='sort'>Sort by:</label>
+                <label htmlFor='sort'>Sort By:</label>
                 <select
                     name='sort'
                     id='sort'
                     value={sort}
                     onChange={updateSort}
-                    className='sort-input'
+                    className='sort-input' style={{
+                        backgroundColor:
+                            "rgb(239, 239, 239)", border: "none"
+                    }}
                 >
                     <option value='price-lowest'>Price (Lowest)</option>
                     <option value='price-highest'>Price (Highest)</option>
@@ -49,76 +51,7 @@ function Sort({ setFilteredData, data }) {
         </div>
     );
 }
-
 export default Sort;
 
 
 
-// import { useState, useEffect } from 'react';
-// import axios from 'axios';
-
-// export default function Sort() {
-//     const [products, setProducts] = useState([]);
-//     const [sort, setSort] = useState('price-lowest');
-
-//     useEffect(() => {
-//         fetchData();
-//     }, []);
-
-//     const fetchData = async () => {
-//         try {
-//             const response = await axios.get('https://course-api.com/react-store-products');
-//             if (response?.data) {
-//                 setProducts(response.data);
-//             }
-//         } catch (error) {
-//             console.error('Error fetching data:', error);
-//         }
-//     };
-
-//     const updateSort = (e) => {
-//         setSort(e.target.value);
-//     };
-
-//     const sortedProducts = () => {
-//         switch (sort) {
-//             case 'price-lowest':
-//                 return [...products].sort((a, b) => a.price - b.price);
-//             case 'price-highest':
-//                 return [...products].sort((a, b) => b.price - a.price);
-//             case 'name-a':
-//                 return [...products].sort((a, b) => a.name.localeCompare(b.name));
-//             case 'name-z':
-//                 return [...products].sort((a, b) => b.name.localeCompare(a.name));
-//             default:
-//                 return products;
-//         }
-//     };
-
-//     return (
-//         <div>
-//             <form>
-//                 <label htmlFor='sort'>Sort by:</label>
-//                 <select
-//                     name='sort'
-//                     id='sort'
-//                     value={sort}
-//                     onChange={updateSort}
-//                     className='sort-input'
-//                 >
-//                     <option value='price-lowest'>Price (Lowest)</option>
-//                     <option value='price-highest'>Price (Highest)</option>
-//                     <option value='name-a'>Name (A - Z)</option>
-//                     <option value='name-z'>Name (Z - A)</option>
-//                 </select>
-//             </form>
-
-//             {sortedProducts().map(product => (
-//                 <div key={product.id}>
-//                     <h3>{product.name}</h3>
-//                     <p>Price: ${product.price}</p>
-//                 </div>
-//             ))}
-//         </div>
-//     );
-// }
