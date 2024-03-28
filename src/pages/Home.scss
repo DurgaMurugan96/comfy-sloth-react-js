@@ -1,5 +1,5 @@
 .HomePage {
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 .Home_pic {
@@ -185,7 +185,6 @@
     color: rgb(121, 87, 68);
     font-size: 16px;
     line-height: 28.8px;
-    margin-top: -9%;
 }
 
 .card .custom_p {
@@ -206,11 +205,6 @@
     gap: 40px;
     margin-top: -1%;
 }
-
-// .card-container .container {
-//     // max-width: 1184px;
-//     max-width: 1192px !important;
-// }
 
 .card-container .card {
     background-color: #c5a491;
@@ -354,4 +348,61 @@
 .submit-btn:hover {
     background-color: #ab7a5f !important;
     color: white !important;
+}
+
+
+
+// media query
+
+@media only screen and (min-width: 600px) {
+    .HomePage .container_Home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .HomePage .container_Home .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .HomePage .container_Home .Home_picture {
+        display: none;
+    }
+
+    .HomePage .container_Home .d-flex .Home_picture {
+        margin-left: 0;
+        /* Resetting margin-left */
+        text-align: center;
+        /* Centering the content */
+    }
+
+    .HomePage .container_Home .d-flex .Home_content {
+        margin-top: 5%;
+        /* Adjusting margin-top for spacing */
+        margin-left: 0;
+        /* Resetting margin-left */
+        text-align: center;
+        /* Centering the content */
+    }
+
+    .HomePage .container_Home .d-flex .Home_content h1 {
+        margin-bottom: 1.5rem;
+        /* Adjusting margin-bottom for spacing */
+    }
+
+    .HomePage .container_Home .d-flex .Home_pic {
+        margin-top: 0;
+        /* Resetting margin-top */
+        margin-left: 0;
+        /* Resetting margin-left */
+    }
+
+    .HomePage .container_Home .d-flex .Home_pic2 {
+        margin-top: 3%;
+        /* Adjusting margin-top for spacing */
+        margin-left: 0;
+        /* Resetting margin-left */
+    }
 }

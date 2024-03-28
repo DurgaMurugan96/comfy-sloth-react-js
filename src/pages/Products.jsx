@@ -18,6 +18,12 @@ function Products() {
     const [listView, setListView] = useState('grid');
     const [filterProducts, setFilterProducts] = useState([]);
 
+    const covertPrice = (price) => {
+        const Tprice = Number(price) / 100;
+        const formattedPrice = Tprice.toLocaleString(undefined, { maximumFractionDigits: 2 });
+        return formattedPrice
+    }
+
     return (
         <div>
             <div>
@@ -63,7 +69,7 @@ function Products() {
                                                     <img src={product.image} alt={product.name} className="img1" style={{ borderRadius: "4px" }} />
                                                 </div>
                                                 <p className="name">{product.name}</p>
-                                                <p className="price"><span className="Doller_space">$</span>{product.price}</p>
+                                                <p className="price"><span className="Doller_space">$</span>{covertPrice(product.price)}</p>
                                             </div>
                                         ))
                                     }

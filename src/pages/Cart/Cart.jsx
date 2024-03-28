@@ -33,7 +33,7 @@ export default function Cart() {
     };
 
     const subtotal = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
-    const shippingFee = 5.34;
+    const shippingFee = 534;
     const totalAmount = subtotal + shippingFee;
 
     const covertPrice = (price) => {
@@ -41,6 +41,7 @@ export default function Cart() {
         const formattedPrice = Tprice.toLocaleString(undefined, { maximumFractionDigits: 2 });
         return formattedPrice
     }
+    
     return (
         <div>
             {
@@ -99,7 +100,7 @@ export default function Cart() {
                                             <button className="sign2" onClick={() => handleQuantityChange(index, item.quantity + 1)}>+</button>
                                         </div>
                                     </td>
-                                    <td className='sub_c'>${item.price * item.quantity}</td>
+                                    <td className='sub_c'>${covertPrice(item.price * item.quantity)}</td>
                                     <td>
                                         <button className='bg_Color' onClick={() => handleDeleteItem(index)}>
                                             <MdDelete style={{ color: "white", marginLeft: "15%" }} />
@@ -121,10 +122,10 @@ export default function Cart() {
                     <section className='d-flex justify-content-end container Cart_Shipping'>
                         <div >
                             <article className='border_CC'>
-                                <h5 className='CC sub_C1'> Subtotal: <span className='sub_C1'>${subtotal}</span></h5>
-                                <p className='CC ship_C1'>Shipping Fee: <span className='ship_C1'>${shippingFee}</span></p>
+                                <h5 className='CC sub_C1'> Subtotal: <span className='sub_C1'>${covertPrice(subtotal)}</span></h5>
+                                <p className='CC ship_C1'>Shipping Fee: <span className='ship_C1'>${covertPrice(shippingFee)}</span></p>
                                 <hr />
-                                <h4 className='CC order_C1' style={{ marginTop: "10%" }}> Order Total:<span className='order_C1'>${totalAmount}</span></h4>
+                                <h4 className='CC order_C1' style={{ marginTop: "10%" }}> Order Total:<span className='order_C1'>${covertPrice(totalAmount)}</span></h4>
                             </article>
                             <br />
                             <a className="login" href="#">LOGIN</a>

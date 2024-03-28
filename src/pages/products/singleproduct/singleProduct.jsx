@@ -45,6 +45,11 @@ const SingleProduct = () => {
         }
     };
 
+    const covertPrice = (price) => {
+        const Tprice = Number(price) / 100;
+        const formattedPrice = Tprice.toLocaleString(undefined, { maximumFractionDigits: 2 });
+        return formattedPrice;
+    };
 
     const addToCart = () => {
         const cartItem = { ...singleProduct, quantity, selectedColor: singleProduct.colors[selectedColorIndex] };
@@ -83,86 +88,88 @@ const SingleProduct = () => {
             <Breadcrumbs
                 pages={"products"}
                 subpage={singleProduct.name} />
-                
-            <div className="row product_S container ">
-                <BackButton />
-                <div className="col-6 d-flex gap-3 flex-column pictures_s">
-                    <div>
-                        <img
-                            src={displayedImage}
-                            alt=""
-                            className=""
-                            style={{ width: "100%", height: "500px", objectFit: "cover", borderRadius: "4px" }}
-                        />
-                    </div>
-                    <div className="d-flex gap-3">
-                        {singleProduct?.images?.map((image, index) => (
+            <div>
+                <div className="section section-center_singlePage page_singlePage container">
+                    <BackButton />
+                    <div className="product-center">
+                        <section className="SinglePage_image">
                             <img
-                                src={image.url}
+                                src={displayedImage}
                                 alt=""
-                                className="flex-grow-1 rounded-1"
-                                key={index}
-                                style={{
-                                    width: "80px",
-                                    height: "80px",
-                                    objectFit: "cover",
-                                    border: displayedImage === image.url ? "3px solid #ab7a5f" : ""
-                                }}
-                                onClick={() => setDisplayedImage(image.url)}
+                                className=""
+                                style={{ width: "100%", height: "500px", objectFit: "cover", borderRadius: "4px", marginBottom: "20px" }}
                             />
-                        ))}
+                            <div className="d-flex gap-3">
+                                {singleProduct?.images?.map((image, index) => (
+                                    <img
+                                        src={image.url}
+                                        alt=""
+                                        className="flex-grow-1 rounded-1"
+                                        key={index}
+                                        style={{
+                                            width: "80px",
+                                            height: "80px",
+                                            objectFit: "cover",
+                                            border: displayedImage === image.url ? "3px solid #ab7a5f" : ""
+                                        }}
+                                        onClick={() => setDisplayedImage(image.url)}
+                                    />
+                                ))}
+                            </div>
+                        </section>
+                        <section className="content">
+                            <h2 className="product_name">{singleProduct.name}</h2>
+                            <div className="product-info" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                <StarsRatings stars={singleProduct.stars} />
+                                <p className="reviews">({singleProduct.reviews} customer reviews)</p>
+                            </div>
+                            {/* <p className="price_S">$<span className="ms-2">{singleProduct.price}</span></p> */}
+                            <p className="price_S">$<span className="ms-2">{covertPrice(singleProduct.price)}</span></p>
+                            <p className="description_S">{singleProduct.description}</p>
+                            <p className='info'>
+                                <span>Available : </span>
+                                {singleProduct.stock > 0 ? 'In stock' : 'out of stock'}
+                            </p>
+                            <p className='info'>
+                                <span>SKU :</span>
+                                {singleProduct.id}
+                            </p>
+                            <p className='info'>
+                                <span>Company: </span>
+                                {singleProduct.company}
+                            </p>
+                            <hr />
+                            <p className="d-flex align-items-center  gap-1" style={{ height: "50px" }}>
+                                <span className="flex-2 style_C" >
+                                    colors:
+                                </span>
+                                {singleProduct?.colors?.map((curr, idx) => (
+                                    <button
+                                        className="mx-1 color_S"
+                                        key={idx}
+                                        style={{
+                                            background: curr,
+                                            width: "24px",
+                                            opacity: "0.6",
+                                            height: "24px",
+                                            padding: "6px",
+                                            borderRadius: "100%",
+                                            position: "relative"
+                                        }}
+                                        onClick={() => handleColorClick(idx)}
+                                    >
+                                        {selectedColorIndex === idx && <FaCheck className="Fa_style" style={{ position: "absolute", top: "-8px", left: "-8px" }} />}
+                                    </button>
+                                ))}
+                            </p>
+                            <div className="Symbol" style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                                <button className="sign" onClick={decrementQuantity} style={{ fontSize: '24px' }}>-</button>
+                                <p className="number">{quantity} </p>
+                                <button className="sign" onClick={incrementQuantity} style={{ fontSize: '24px' }}>+</button>
+                            </div>
+                            <button onClick={addToCart} className='button-link_C '>ADD TO CART</button>
+                        </section>
                     </div>
-                </div>
-                <div className="col-6 Details">
-                    <h2 className="product_name">{singleProduct.name}</h2>
-                    <div className="product-info" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <StarsRatings stars={singleProduct.stars} />
-                        <p className="reviews">({singleProduct.reviews} customer reviews)</p>
-                    </div>
-                    <p className="price_S">$<span className="ms-2">{singleProduct.price}</span></p>
-                    <p className="description_S">{singleProduct.description}</p>
-                    <p className='info'>
-                        <span>Available : </span>
-                        {singleProduct.stock > 0 ? 'In stock' : 'out of stock'}
-                    </p>
-                    <p className='info'>
-                        <span>SKU :</span>
-                        {singleProduct.id}
-                    </p>
-                    <p className='info'>
-                        <span>Company: </span>
-                        {singleProduct.company}
-                    </p>
-                    <hr />
-                    <p className="d-flex align-items-center  gap-1" style={{ height: "50px" }}>
-                        <span className="flex-2 style_C" >
-                            colors:
-                        </span>
-                        {singleProduct?.colors?.map((curr, idx) => (
-                            <button
-                                className="mx-1 color_S"
-                                key={idx}
-                                style={{
-                                    background: curr,
-                                    width: "24px",
-                                    opacity: "0.6",
-                                    height: "24px",
-                                    padding: "6px",
-                                    borderRadius: "100%",
-                                    position: "relative"
-                                }}
-                                onClick={() => handleColorClick(idx)}
-                            >
-                                {selectedColorIndex === idx && <FaCheck className="Fa_style" style={{ position: "absolute", top: "-8px", left: "-8px" }} />}
-                            </button>
-                        ))}
-                    </p>
-                    <div className="Symbol" style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-                        <button className="sign" onClick={decrementQuantity} style={{ fontSize: '24px' }}>-</button>
-                        <p className="number">{quantity} </p>
-                        <button className="sign" onClick={incrementQuantity} style={{ fontSize: '24px' }}>+</button>
-                    </div>
-                    <button onClick={addToCart} className='button-link_C '>ADD TO CART</button>
                 </div>
             </div>
             <Footer />

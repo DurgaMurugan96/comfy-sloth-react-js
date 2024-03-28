@@ -30,7 +30,7 @@ function App() {
         <ul className=' menu d-flex justify-content-end gap-2'>
           <li className='menu2'>
             <Link to="/cart">Cart</Link>
-            {/* <FaShoppingCart className='cart_icon' /> */}
+            <FaShoppingCart className='cart_icon' />
           </li>
           <li className='menu2'>
             <Link to="/Login">Login</Link>

@@ -3,6 +3,13 @@ import './ListView.css';
 import { Link } from 'react-router-dom'
 
 function ListView({ data = [] }) {
+
+    const covertPrice = (price) => {
+        const Tprice = Number(price) / 100;
+        const formattedPrice = Tprice.toLocaleString(undefined, { maximumFractionDigits: 2 });
+        return formattedPrice
+
+    }
     return (
         <div>
             <div className="container">
@@ -20,10 +27,9 @@ function ListView({ data = [] }) {
                                             </td>
                                             <td className="table2 ">
                                                 <p className="name1">{user.name}</p>
-                                                <p className="price1"><span className="Doller_space">$</span>{user.price}</p>
+                                                <p className="price1"><span className="Doller_space">$</span>{covertPrice(user.price)}</p>
                                                 <p className="description">{user.description}</p>
                                                 <Link to={`/products/${user.id}`} className="b-detail" style={{ textDecoration: "none" }}>Details</Link>
-                                                {/* <p><button className="b-detail">Details</button></p> */}
                                             </td>
                                         </tr>
                                     </table>

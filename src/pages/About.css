@@ -34,3 +34,9 @@
      margin-top: 7% !important;
      padding-bottom: 7%;
  }
+
+ .aboutDesgin {
+     display: grid;
+     gap: 4rem;
+     grid-template-columns: 1fr 1fr;
+ }
