@@ -37,7 +37,6 @@
 .com_container {
   max-width: 1170px;
   width: 100%;
-
   margin: 0px auto;
   padding: 5px;
 }
@@ -80,4 +79,93 @@
 
 .menu1:hover::before {
   width: 100%;
+}
+
+
+.Navbar_style .nav_content {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Navbar_style .logo_size_icon {
+  width: 175px;
+}
+
+.Navbar_style .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.Navbar_style .nav-links a {
+  text-decoration: none;
+  color: rgb(50, 77, 103);
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  line-height: 24px;
+}
+
+.Navbar_style .cart_login {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  width: 225px;
+  list-style: none;
+
+}
+
+.Navbar_style .cart_login a {
+  text-decoration: none;
+  color: rgb(16, 42, 66);
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 1.6px;
+}
+
+
+
+.mob-menu-icon {
+  display: none;
+}
+
+@media screen and (max-width:1000px) {
+  .Navbar_style {
+    padding: 20px;
+  }
+
+  .Navbar_style .cart_login,
+  .Navbar_style .nav-links {
+    display: none;
+  }
+
+  .mob-menu-icon {
+    display: block;
+  }
+
+  .nav-links-mob {
+    background-color: #fff;
+    height: 250% !important;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 75px;
+    width: 100%;
+    list-style: none;
+  }
+
+  .nav-links-mob a {
+    color: #48647f;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+
+
+
+
 }

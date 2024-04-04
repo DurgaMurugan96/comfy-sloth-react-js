@@ -5,13 +5,22 @@
 }
 
 .Footer_style h5 {
-    margin-left: 38%;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1.6px;
     line-height: 20px;
+    text-align: center !important;
 }
 
 h5 span {
     color: #ab7a5f;
+}
+
+@media screen and (max-width:1250px) {
+    .Footer_style {
+        h5 {
+            margin-left: 0% !important;
+            text-align: center !important;
+        }
+    }
 }

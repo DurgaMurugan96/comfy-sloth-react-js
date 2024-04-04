@@ -59,3 +59,14 @@
     display: grid;
     grid-template-columns: 0.2fr 1fr !important;
 }
+
+
+/* @media screen and (max-width:750) {
+    .table1 td {
+        display: block !important;
+    }
+
+    .table2 td {
+        display: block !important;
+    }
+} */

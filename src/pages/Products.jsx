@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import ListView from './ListView';
 import './Products.css';
-import Footer from './Footer';
 import { useNavigate } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import { IoGrid } from "react-icons/io5";
@@ -9,6 +8,7 @@ import { HiMenu } from "react-icons/hi";
 import Sort from './Sort';
 import Breadcrumbs from '../components/breadcrumbs/breadcrumbs';
 import { FilterSection } from '../components/sidebar/Newsildebar';
+import Footer from './Footer';
 
 
 function Products() {
@@ -42,9 +42,9 @@ function Products() {
                                     <HiMenu style={{ fontSize: "16px" }} />
                                 </span>
                             </div>
-                            <p className="m-0">{filterProducts.length} Products Found</p>
+                            <p className="m-0 product_name_style w-20">{filterProducts.length} Products Found</p>
                             <hr className="m-0 mx-2 w-50 " />
-                            <div className="d-flex align-items-center">
+                            <div className="d-flex align-items-center w-20">
                                 <Sort setFilterProducts={setFilterProducts} data={filterProducts} />
                             </div>
                         </div>
@@ -56,7 +56,7 @@ function Products() {
                                 <div className="row product_row">
                                     {
                                         !!filterProducts.length && filterProducts?.map((product, index) => (
-                                            <div key={index} className="col-4 ">
+                                            <div key={index} className="col-4 product_images">
 
                                                 <div className='image_container' onClick={() => navigate(`/products/${product.id}`)} style={{ cursor: "pointer" }}>
                                                     <div className="absolute_bg " style={{

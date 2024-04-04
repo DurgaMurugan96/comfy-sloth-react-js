@@ -5,7 +5,7 @@ function About() {
     return (
         <>
             <Breadcrumbs pages={"about"} />
-            <div className='d-flex container  about_container'>
+            <div className='container  about_container'>
                 <div className='mb-20 picture'>
                     <img src="https://react-course-comfy-sloth-store.netlify.app/static/media/hero-bcg.a876f19f6786a3aca992.jpeg" className="pic" alt="alternative_text" />
                 </div>

@@ -3,6 +3,7 @@
     height: 20vh;
     display: flex;
     align-items: center;
+    padding: 0px 2rem;
 
     h1 {
         font-size: 2rem;
@@ -30,4 +31,10 @@
         }
     }
 
+}
+
+@media screen and (max-width:380px) {
+    h1 {
+        font-size: 25px !important;
+    }
 }

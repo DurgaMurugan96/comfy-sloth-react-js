@@ -17,8 +17,6 @@
     margin-top: 5%;
     margin-left: 3% !important;
     padding-bottom: 5%;
-    /* display: grid;
-    gap: 4rem; */
 }
 
 .pictures_s {
@@ -55,7 +53,6 @@
     color: rgb(50, 77, 103);
     font-size: 16px;
     line-height: 2;
-    /* max-width: 45em; */
 }
 
 .info span {
@@ -125,7 +122,6 @@
     font-size: 90%;
 }
 
-/*  */
 
 .product-center {
     grid-template-columns: 1fr 1fr;
@@ -157,4 +153,30 @@
     letter-spacing: 1.6px;
     line-height: 40px;
     margin-left: 3%;
+}
+
+@media screen and (max-width:990px) {
+    .product-center {
+        display: block !important;
+        gap: 4rem;
+        margin-top: 2rem;
+    }
+
+    .content {
+        margin-top: 9%
+    }
+
+    .content h2 {
+        font-size: 30px !important;
+    }
+
+
+}
+
+@media screen and (max-width:570px) {
+    .page_singlePage {
+        margin-top: 5% !important;
+        padding: 0px 1rem !important;
+    }
+
 }

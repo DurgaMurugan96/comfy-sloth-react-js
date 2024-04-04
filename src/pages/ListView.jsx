@@ -20,7 +20,7 @@ function ListView({ data = [] }) {
                         <div className="row">
                             {
                                 data.map((user, Products) => <div key={Products} >
-                                    <table>
+                                    <table className='table-vertical'>
                                         <tr>
                                             <td className="table1">
                                                 <p><img src={user.image} alt={user.name} className="img2" /></p>

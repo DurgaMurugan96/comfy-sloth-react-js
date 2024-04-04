@@ -1,42 +1,79 @@
- .about_container .pic {
-     width: 125%;
-     border-radius: 0.25rem;
-     height: 500px;
-     object-fit: cover;
-     margin-left: -4%;
- }
+.about_container {
+    display: flex;
+    justify-content: center;
+    gap: 23%;
+}
 
- .about_container h2 {
-     font-size: 40px;
-     font-weight: 700;
-     letter-spacing: 1.6px;
-     line-height: 40px;
-     margin-top: 10% !important;
-     margin-left: 20%;
- }
+.about_container .pic {
+    width: 180%;
+    border-radius: 0.25rem;
+    height: 500px;
+    object-fit: cover;
+}
 
- .about_container .underline {
-     border-bottom: 5px solid #ab7a5f;
-     height: 0.25rem;
-     width: 6rem;
-     margin-left: 20%;
- }
+.about_container h2 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    line-height: 40px;
+    margin-top: 10% !important;
+    color: rgb(16, 42, 66);
+}
 
- .about_container p {
-     max-width: 45em;
-     margin: 2rem auto 0px;
-     line-height: 2;
-     color: #617d98;
-     margin-left: 20%;
- }
+.about_container .underline {
+    border-bottom: 4px solid #ab7a5f;
+    height: 0.25rem;
+    width: 6rem;
+}
 
- .about_container .picture {
-     margin-top: 7% !important;
-     padding-bottom: 7%;
- }
+.about_container p {
+    max-width: 45em;
+    margin: 2rem auto 0px;
+    line-height: 2;
+    color: #617d98;
+}
 
- .aboutDesgin {
-     display: grid;
-     gap: 4rem;
-     grid-template-columns: 1fr 1fr;
- }
+.about_container .picture {
+    margin-top: 7% !important;
+    padding-bottom: 7%;
+}
+
+.content {
+    margin: 2%;
+}
+
+/* media query */
+
+@media screen and (max-width:1500px) {
+    .about_container .Navbar_style {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .about_container {
+        display: block !important;
+    }
+
+    .about_container .pic {
+        width: 100%;
+        border-radius: 0.25rem;
+        height: 500px;
+        object-fit: cover;
+        margin: 0px auto;
+    }
+
+    .about_container h2 {
+        margin-left: 0%;
+    }
+
+    .about_container .underline {
+        margin-left: 0%;
+    }
+
+    .about_container p {
+        margin-left: 0%;
+        margin-bottom: 8%;
+    }
+
+}

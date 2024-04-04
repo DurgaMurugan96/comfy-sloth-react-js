@@ -41,7 +41,7 @@ export default function Cart() {
         const formattedPrice = Tprice.toLocaleString(undefined, { maximumFractionDigits: 2 });
         return formattedPrice
     }
-    
+
     return (
         <div>
             {

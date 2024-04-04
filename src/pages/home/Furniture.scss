@@ -1,0 +1,201 @@
+.custom {
+    padding-top: 6%;
+    background-color: rgb(234, 222, 215);
+}
+
+.custom .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.custom h3 {
+    color: rgb(69, 50, 39);
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    line-height: 32px;
+    margin-left: 10%;
+    padding-bottom: 15%;
+}
+
+.custom p {
+    color: rgb(121, 87, 68);
+    font-size: 16px;
+    line-height: 28.8px;
+}
+
+.card .custom_p {
+    color: rgb(121, 87, 68);
+    font-size: 16px;
+    line-height: 28.8px;
+    text-align: center;
+}
+
+.custom h4 {
+    color: #453227;
+    text-align: center;
+}
+
+.card-container {
+    margin: 0px auto;
+
+
+    .card {
+        background-color: #c5a491;
+        border-color: #eaded7;
+
+
+    }
+
+}
+
+.image_container {
+    position: relative;
+    transition: all 300ms;
+
+    &:hover {
+        .absolute_bg {
+            opacity: 1;
+        }
+    }
+
+    .icon_container {
+        background-color: #ab7a5f;
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+            color: white;
+            font-size: 20px;
+
+        }
+    }
+
+
+    .absolute_bg {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+        background: linear-gradient(rgba(0, 0, 0, 0.315), rgba(0, 0, 0, 0.301));
+        width: 100%;
+        height: 219px;
+        opacity: 0;
+        transition: opacity 300ms;
+    }
+}
+
+@media screen and (max-width:980px) {
+    .custom_furniture {
+        background: #eaded7;
+        width: 100%;
+        height: 400px;
+        padding: 80px;
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .heading {
+                color: #453227;
+                flex: 1;
+                font-weight: 700;
+            }
+
+            p {
+                color: #795749;
+                flex: 1;
+            }
+        }
+
+        .custom_card_container {
+            margin-top: 50px;
+            width: 100%;
+            gap: 30px;
+
+            .card {
+                background: #c5a491;
+                width: 350px;
+                height: 300px;
+                border: none;
+
+                h4 {
+                    color: #453227;
+                    text-align: center;
+                    font-weight: 600;
+                }
+
+                .icons {
+                    width: 4rem;
+                    height: 4rem;
+                    margin: 0px auto 1rem;
+                    margin-top: 20px;
+                    place-items: center;
+                    border-radius: 50%;
+                    display: grid;
+                    color: #453227;
+                    background-color: #eaded7;
+                }
+
+                p {
+                    color: #76523e;
+                    font-weight: 400;
+                    line-height: 1.8;
+                }
+            }
+        }
+
+        @media (max-width:1275px) {
+            height: auto;
+            padding: 20px;
+
+            .container {
+                width: 100% !important;
+                margin: 0 !important;
+            }
+
+            .header {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .custom_card_container {
+                gap: 20px !important;
+            }
+
+            .card {
+                width: 45% !important;
+            }
+        }
+
+        @media (max-width:900px) {
+            height: auto;
+
+            .card {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1320px) {
+    .custom_card_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+}
