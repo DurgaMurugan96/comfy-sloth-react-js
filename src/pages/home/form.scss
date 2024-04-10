@@ -74,6 +74,28 @@
     color: white;
 }
 
+@media screen and (max-width:320px) {
+    .Home_page .submit-btn {
+        background: #ab7a5f;
+        text-transform: capitalize;
+        letter-spacing: 0.1rem;
+        cursor: pointer;
+        transition: all 0.3s linear;
+        color: #222;
+        font-size: 1rem;
+        padding: 10px 97px 10px 97px !important;
+        border: 2px solid #222;
+        margin-top: 4%;
+
+    }
+
+    .contact_form {
+        margin-left: -4% !important;
+    }
+
+
+}
+
 @media screen and (max-width: 550px) {
     .Home_page {
         padding: 7rem 0 !important;

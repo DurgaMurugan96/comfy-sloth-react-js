@@ -2,7 +2,6 @@
     width: 300px;
     height: 200px;
     object-fit: cover;
-    margin-bottom: 1rem;
     border-radius: 0.25rem;
 }
 
@@ -13,9 +12,12 @@
     letter-spacing: 1.6px;
     line-height: 24px;
     text-transform: capitalize;
+    margin: 0 !important;
 }
 
 .price1 {
+    margin: 0 !important;
+
     color: rgb(185, 145, 121);
     font-size: 16px;
     font-weight: 700;
@@ -32,13 +34,16 @@
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     text-overflow: ellipsis;
 }
 
-.table1,
+
 .table2 {
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
 }
 
 .b-detail {
@@ -60,13 +65,22 @@
     grid-template-columns: 0.2fr 1fr !important;
 }
 
+.list_view_container .detail_btn {
+    color: white;
+    background-color: rgb(171, 122, 95);
+    font-size: 8px;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    line-height: 12px;
+    text-transform: uppercase;
+    padding: 4px 8px 4px 8px;
+    border: none;
+    border-radius: 5px;
+    width: fit-content;
+}
 
-/* @media screen and (max-width:750) {
-    .table1 td {
-        display: block !important;
+@media (max-width:1000px) {
+    .list_view_container .table-vertical tr {
+        flex-direction: column;
     }
-
-    .table2 td {
-        display: block !important;
-    }
-} */
+}

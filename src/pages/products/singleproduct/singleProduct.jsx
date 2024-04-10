@@ -101,7 +101,7 @@ const SingleProduct = () => {
                             <img
                                 src={displayedImage}
                                 alt=""
-                                className=""
+                                className="single_image"
                                 style={{ width: "100%", height: "500px", objectFit: "cover", borderRadius: "4px", marginBottom: "20px" }}
                             />
                             <div className="d-flex gap-3 Box_pictures">
@@ -144,26 +144,28 @@ const SingleProduct = () => {
                             <hr />
 
                             {singleProduct.stock > 0 && (
-                                <p className="d-flex align-items-center gap-1" style={{ height: "50px" }}>
-                                    <span className="flex-2 style_C">colors:</span>
-                                    {singleProduct?.colors?.map((curr, idx) => (
-                                        <button
-                                            className="mx-1 color_S"
-                                            key={idx}
-                                            style={{
-                                                background: curr,
-                                                width: "24px",
-                                                opacity: "0.6",
-                                                height: "24px",
-                                                padding: "6px",
-                                                borderRadius: "100%",
-                                                position: "relative"
-                                            }}
-                                            onClick={() => handleColorClick(idx)}
-                                        >
-                                            {selectedColorIndex === idx && <FaCheck className="Fa_style" style={{ position: "absolute", top: "-8px", left: "-8px" }} />}
-                                        </button>
-                                    ))}
+                                <p className="d-flex align-items-center gap-4" style={{ height: "50px" }}>
+                                    <span className="flex-2 style_C ">colors:</span>
+                                    <span className="d-flex align-items-center">
+                                        {singleProduct?.colors?.map((curr, idx) => (
+                                            <button
+                                                className="mx-1 color_S"
+                                                key={idx}
+                                                style={{
+                                                    background: curr,
+                                                    width: "24px",
+                                                    opacity: "0.6",
+                                                    height: "24px",
+                                                    padding: "6px",
+                                                    borderRadius: "100%",
+                                                    position: "relative",
+
+                                                }}
+                                                onClick={() => handleColorClick(idx)}
+                                            >
+                                                {selectedColorIndex === idx && <FaCheck className="Fa_style" style={{ position: "absolute", top: "-8px", left: "-8px" }} />}
+                                            </button>
+                                        ))}</span>
                                 </p>
                             )}
 

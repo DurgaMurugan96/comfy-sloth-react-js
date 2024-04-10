@@ -1,19 +1,16 @@
 .breadcrumb_container {
     background-color: #eaded7;
-    height: 20vh;
+    min-height: 20vh;
     display: flex;
     align-items: center;
-    padding: 0px 2rem;
+    padding: 2rem;
 
-    .heading_style {
+     .link_head_content {
         font-size: 2rem;
         color: rgb(121, 87, 68);
         font-weight: 600;
         text-decoration: none;
         text-transform: capitalize;
-        display: flex;
-        align-items: center;
-        gap: 10px;
 
         .link {
             text-decoration: none;
@@ -22,7 +19,6 @@
             &:hover {
                 color: rgb(69, 50, 39);
             }
-
         }
 
         .active_link {
@@ -30,19 +26,13 @@
             color: rgb(69, 50, 39);
         }
     }
-
 }
 
 @media screen and (max-width:799px) {
-    .heading_style {
-        font-size: 23px !important;
+    .breadcrumb_container {
+        padding: 20px;
+        .link_head_content {
+            font-size: 23px !important;
+        }
     }
-}
-
-
-@media screen and (max-width:400px) {
-    .heading_style {
-        font-size: 20px !important;
-    }
-
 }

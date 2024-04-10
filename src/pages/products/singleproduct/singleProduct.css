@@ -162,6 +162,10 @@
     margin-left: 3%;
 }
 
+.color_style {
+    display: grid !important;
+ 
+}
 
 @media screen and (max-width:480px) {
     .SinglePage_image .Box_pictures {
@@ -173,6 +177,12 @@
         width: 50px !important;
         height: 50px !important;
         object-fit: "cover" !important;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .single_image {
+        height: 300px !important;
     }
 }
 

@@ -16,19 +16,18 @@
 }
 
 
-.Navbar_style .nav_content {
+.nav_content {
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.Navbar_style .logo_size_icon {
+.logo_size_icon {
   width: 175px;
-  margin-left: -26%;
 }
 
-.Navbar_style .nav-links {
+.nav-links {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +36,7 @@
   margin-top: 1%;
 }
 
-.Navbar_style .nav-links a {
+.nav-links a {
   text-decoration: none;
   color: rgb(50, 77, 103);
   font-size: 16px;
@@ -65,7 +64,7 @@
 
 
 
-.Navbar_style .cart_login {
+.cart_login {
   display: flex;
   gap: 20px;
   justify-content: flex-end;
@@ -75,7 +74,7 @@
 
 }
 
-.Navbar_style .cart_login a {
+.cart_login a {
   text-decoration: none;
   color: rgb(16, 42, 66);
   font-size: 24px;
@@ -106,13 +105,12 @@
 }
 
 
-@media screen and (max-width:1000px) {
-  .Navbar_style {
-    padding: 20px;
-  }
 
-  .Navbar_style .cart_login,
-  .Navbar_style .nav-links {
+@media screen and (max-width:1000px) {
+  
+
+  .cart_login,
+  .nav-links {
     display: none;
   }
 
@@ -135,17 +133,6 @@
     color: #48647f;
     text-decoration: none;
     font-size: 20px;
-  }
-
-  @media screen and (max-width:320px) {
-    .Navbar_style .nav_content {
-      margin-top: -9% !important;
-    }
-
-    .menu_icons {
-      margin-left: 70% !important;
-    }
-
   }
 
   @media screen and (max-width:600px) {

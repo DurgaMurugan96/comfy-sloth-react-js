@@ -42,7 +42,7 @@ function Products() {
                                     <HiMenu style={{ fontSize: "16px" }} />
                                 </span>
                             </div>
-                            <p className="m-0 product_name_style">{filterProducts.length} Products Found</p>
+                            <p className="m-0 product_name_style" style={{ color: "#324d67" }}>{filterProducts.length} Products Found </p>
                             <hr className="m-0 mx-2 w-50 " />
                             <div className="d-flex align-items-center ">
                                 <Sort setFilterProducts={setFilterProducts} data={filterProducts} />

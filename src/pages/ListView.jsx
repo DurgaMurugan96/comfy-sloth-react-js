@@ -8,20 +8,19 @@ function ListView({ data = [] }) {
         const Tprice = Number(price) / 100;
         const formattedPrice = Tprice.toLocaleString(undefined, { maximumFractionDigits: 2 });
         return formattedPrice
-
     }
     return (
         <div>
-            <div className="container">
+            <div className="list_view_container container">
                 <div className="mt-3">
-                    <div className="trigger-button" onClick={() => { console.log('clicked') }}>
+                    <div className="trigger-button">
                     </div>
                     <body>
                         <div className="row">
                             {
                                 data.map((user, Products) => <div key={Products} >
-                                    <table className='table-vertical'>
-                                        <tr>
+                                    <table className='table-vertical  mb-3'>
+                                        <tr className='d-flex gap-4'>
                                             <td className="table1">
                                                 <p><img src={user.image} alt={user.name} className="img2" /></p>
                                             </td>
@@ -29,7 +28,7 @@ function ListView({ data = [] }) {
                                                 <p className="name1">{user.name}</p>
                                                 <p className="price1"><span className="Doller_space">$</span>{covertPrice(user.price)}</p>
                                                 <p className="description">{user.description}</p>
-                                                <Link to={`/products/${user.id}`} className="b-detail" style={{ textDecoration: "none" }}>Details</Link>
+                                                <Link to={`/products/${user.id}`} className="detail_btn" style={{ textDecoration: "none" }}>Details</Link>
                                             </td>
                                         </tr>
                                     </table>

@@ -9,7 +9,7 @@ import SingleProduct from './pages/products/singleproduct/singleProduct'
 import { FaShoppingCart, FaUserPlus } from "react-icons/fa";
 import Logo from '../src/assets/logo.svg';
 import { useState } from 'react';
-import { IoClose, IoMenuSharp } from 'react-icons/io5';
+import { IoMenuSharp } from 'react-icons/io5';
 import MobNavbar from './components/mobNav/mobNavbar';
 import { useSelector } from 'react-redux';
 
@@ -19,7 +19,7 @@ function App() {
   const { cart_count } = useSelector(state => state.cart);
   return (
     <>
-      <nav className='Navbar_style '>
+      <nav >
         <div className="container-xl nav_content ">
           <Link to="/">
             <img src={Logo} alt="" className='logo_size_icon' />
@@ -52,7 +52,7 @@ function App() {
           </div>
 
           <button className='mob-menu-icon' onClick={() => setIsMobile(!isMobile)}>
-            {isMobile ? <IoClose size={37} style={{ color: "red" }} /> : <IoMenuSharp size={37} style={{ color: "rgb(171, 122, 95)" }} className='menu_icons' />}
+            {<IoMenuSharp size={37} style={{ color: "rgb(171, 122, 95)" }} className='menu_icons' />}
           </button>
         </div>
       </nav>

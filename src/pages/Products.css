@@ -255,4 +255,9 @@ button {
         display: block !important;
     }
 
+    .product_name_style {
+        font-size: 14px !important;
+    }
+
+
 }
