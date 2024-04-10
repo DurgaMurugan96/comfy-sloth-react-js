@@ -43,6 +43,11 @@
 }
 
 /* media query */
+@media screen and (max-width:800px) {
+    .content p {
+        font-size: 14px !important;
+    }
+}
 
 @media screen and (max-width:1500px) {
     .about_container .Navbar_style {
@@ -74,6 +79,13 @@
     .about_container p {
         margin-left: 0%;
         margin-bottom: 8%;
+    }
+
+}
+
+@media screen and (max-width:320px) {
+    .about_container .picture {
+        margin-top: 6% !important;
     }
 
 }

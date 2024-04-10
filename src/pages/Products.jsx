@@ -33,7 +33,7 @@ function Products() {
                         <FilterSection setFilterProducts={setFilterProducts} filterProducts={filterProducts} />
                     </div>
                     <div className="scrolling-column " style={{ maxWidth: "946px" }}>
-                        <div className='product_sort d-flex align-items-center justify-content-between'>
+                        <div className='product_sort d-flex align-items-center justify-content-between' >
                             <div className="view_change_btn m-0 align-items-center d-flex gap-1">
                                 <span className='btn_container border rounded  p-1 d-flex align-items-center' style={{ background: listView === "grid" && "black", color: listView === "grid" ? 'white' : "black" }} onClick={() => setListView("grid")}>
                                     <IoGrid style={{ fontSize: "16px" }} />
@@ -42,14 +42,15 @@ function Products() {
                                     <HiMenu style={{ fontSize: "16px" }} />
                                 </span>
                             </div>
-                            <p className="m-0 product_name_style w-20">{filterProducts.length} Products Found</p>
+                            <p className="m-0 product_name_style">{filterProducts.length} Products Found</p>
                             <hr className="m-0 mx-2 w-50 " />
-                            <div className="d-flex align-items-center w-20">
+                            <div className="d-flex align-items-center ">
                                 <Sort setFilterProducts={setFilterProducts} data={filterProducts} />
                             </div>
                         </div>
 
 
+                        {/* list View */}
                         {listView === 'list' ?
                             <ListView data={filterProducts} /> :
                             <div className="mt-3" style={{ maxWidth: "946px" }}>
@@ -74,7 +75,7 @@ function Products() {
                                         ))
                                     }
                                     {
-                                        filterProducts.length === 0 && <>Sorry, no products found
+                                        filterProducts.length === 0 && <>  <span className='error_message'>Sorry, no products matched your search.</span>
                                         </>
                                     }
                                 </div>
@@ -89,3 +90,13 @@ function Products() {
     );
 }
 export default Products;
+
+
+
+
+
+
+
+
+
+

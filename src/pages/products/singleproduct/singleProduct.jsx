@@ -6,9 +6,13 @@ import Footer from "../../Footer";
 import { FaCheck } from 'react-icons/fa';
 import StarsRatings from "../../../components/stars/stars";
 import Breadcrumbs from "../../../components/breadcrumbs/breadcrumbs";
+import { useDispatch } from "react-redux";
+import { setCartIncrement } from "../../../store/slice/counterSlice";
+
 
 const SingleProduct = () => {
     const params = useParams();
+    const dispatch = useDispatch()
     const [singleProduct, setSingleProduct] = useState({});
     const [displayedImage, setDisplayedImage] = useState('');
     const [pageLoading, setPageLoading] = useState(true);
@@ -53,7 +57,7 @@ const SingleProduct = () => {
 
     const addToCart = () => {
         const cartItem = { ...singleProduct, quantity, selectedColor: singleProduct.colors[selectedColorIndex] };
-
+        dispatch(setCartIncrement({ value: quantity }))
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         const productId = singleProduct?.id
 
@@ -71,7 +75,6 @@ const SingleProduct = () => {
             const totalItems = [...cart, cartItem]
             localStorage.setItem('cart', JSON.stringify(totalItems));
         }
-
         navigate('/cart');
     };
 
@@ -89,8 +92,10 @@ const SingleProduct = () => {
                 pages={"products"}
                 subpage={singleProduct.name} />
             <div>
-                <div className="section section-center_singlePage page_singlePage container">
-                    <BackButton />
+                <div className="section section-center_singlePage page_singlePage container container_section">
+                    <div className="backbutton_style">
+                        <BackButton />
+                    </div>
                     <div className="product-center">
                         <section className="SinglePage_image">
                             <img
@@ -99,12 +104,12 @@ const SingleProduct = () => {
                                 className=""
                                 style={{ width: "100%", height: "500px", objectFit: "cover", borderRadius: "4px", marginBottom: "20px" }}
                             />
-                            <div className="d-flex gap-3">
+                            <div className="d-flex gap-3 Box_pictures">
                                 {singleProduct?.images?.map((image, index) => (
                                     <img
                                         src={image.url}
                                         alt=""
-                                        className="flex-grow-1 rounded-1"
+                                        className="flex-grow-1 rounded-1 flex_pictures"
                                         key={index}
                                         style={{
                                             width: "80px",
@@ -123,14 +128,12 @@ const SingleProduct = () => {
                                 <StarsRatings stars={singleProduct.stars} />
                                 <p className="reviews">({singleProduct.reviews} customer reviews)</p>
                             </div>
-                            {/* <p className="price_S">$<span className="ms-2">{singleProduct.price}</span></p> */}
                             <p className="price_S">$<span className="ms-2">{covertPrice(singleProduct.price)}</span></p>
                             <p className="description_S">{singleProduct.description}</p>
                             <p className='info'>
                                 <span>Available : </span>
-                                {singleProduct.stock > 0 ? 'In stock' : 'out of stock'}
-                            </p>
-                            <p className='info'>
+                                {singleProduct.stock > 0 ? 'In stock' : 'Out of stock'}
+                            </p><p className='info'>
                                 <span>SKU :</span>
                                 {singleProduct.id}
                             </p>
@@ -139,35 +142,44 @@ const SingleProduct = () => {
                                 {singleProduct.company}
                             </p>
                             <hr />
-                            <p className="d-flex align-items-center  gap-1" style={{ height: "50px" }}>
-                                <span className="flex-2 style_C" >
-                                    colors:
-                                </span>
-                                {singleProduct?.colors?.map((curr, idx) => (
-                                    <button
-                                        className="mx-1 color_S"
-                                        key={idx}
-                                        style={{
-                                            background: curr,
-                                            width: "24px",
-                                            opacity: "0.6",
-                                            height: "24px",
-                                            padding: "6px",
-                                            borderRadius: "100%",
-                                            position: "relative"
-                                        }}
-                                        onClick={() => handleColorClick(idx)}
-                                    >
-                                        {selectedColorIndex === idx && <FaCheck className="Fa_style" style={{ position: "absolute", top: "-8px", left: "-8px" }} />}
-                                    </button>
-                                ))}
-                            </p>
-                            <div className="Symbol" style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-                                <button className="sign" onClick={decrementQuantity} style={{ fontSize: '24px' }}>-</button>
-                                <p className="number">{quantity} </p>
-                                <button className="sign" onClick={incrementQuantity} style={{ fontSize: '24px' }}>+</button>
-                            </div>
-                            <button onClick={addToCart} className='button-link_C '>ADD TO CART</button>
+
+                            {singleProduct.stock > 0 && (
+                                <p className="d-flex align-items-center gap-1" style={{ height: "50px" }}>
+                                    <span className="flex-2 style_C">colors:</span>
+                                    {singleProduct?.colors?.map((curr, idx) => (
+                                        <button
+                                            className="mx-1 color_S"
+                                            key={idx}
+                                            style={{
+                                                background: curr,
+                                                width: "24px",
+                                                opacity: "0.6",
+                                                height: "24px",
+                                                padding: "6px",
+                                                borderRadius: "100%",
+                                                position: "relative"
+                                            }}
+                                            onClick={() => handleColorClick(idx)}
+                                        >
+                                            {selectedColorIndex === idx && <FaCheck className="Fa_style" style={{ position: "absolute", top: "-8px", left: "-8px" }} />}
+                                        </button>
+                                    ))}
+                                </p>
+                            )}
+
+                            {singleProduct.stock > 0 && (
+                                <div className="Symbol" style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                                    <button className="sign" onClick={decrementQuantity} style={{ fontSize: '24px' }}>-</button>
+                                    <p className="number">{quantity} </p>
+                                    <button className="sign" onClick={incrementQuantity} style={{ fontSize: '24px' }}>+</button>
+                                </div>
+                            )}
+
+                            {singleProduct.stock > 0 && (
+                                <div className="Button_adjustment">
+                                    <button onClick={addToCart} className='button-link_C'>ADD TO CART</button>
+                                </div>
+                            )}
                         </section>
                     </div>
                 </div>

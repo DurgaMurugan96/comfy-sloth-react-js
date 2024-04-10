@@ -1,0 +1,83 @@
+.mobile_view_navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    // transition: width 1s ease, transform 1s ease;
+    transition: width 0.5s ease, transform 0.5s ease;
+    transform: translateX(-200%);
+
+    &.isActive {
+        transform: translateX(0);
+        z-index: 999;
+
+    }
+}
+
+.logo_size_icon1 {
+    height: 45px;
+}
+
+.logoheader {
+    margin-top: 5% !important;
+    margin-left: 7%;
+
+}
+
+.menu_desgin {
+    margin-top: 6px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    line-height: 52px;
+    color: #324d67;
+    text-decoration: none;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+.cartStyle {
+    margin: 0px auto !important;
+    margin-top: 2%;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.lineremove {
+    text-decoration: none !important;
+    color: #102a42;
+}
+
+.symbol {
+    margin-left: 3px;
+    color: #102a42;
+
+}
+
+.login_icon {
+    margin-top: -1%;
+    margin-left: 10px;
+}
+
+.carts_design {
+    background-color: #ab7a5f !important;
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 75px;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    color: white;
+    padding: 12px
+}

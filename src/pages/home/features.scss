@@ -67,7 +67,7 @@
 
     .names,
     .prices {
-        padding-bottom: 15%;
+        padding-bottom: 5%;
     }
 
     .names {
@@ -96,6 +96,14 @@
 }
 
 
+@media screen and (max-width:320px) {
+    .about_container .picture {
+        margin-top: 10% !important;
+    }
+
+}
+
+
 @media screen and (max-width:900px) {
     .Features {
         height: 700%;
@@ -112,6 +120,18 @@
             height: 219px
         }
 
+
+        h2 {
+            text-align: center;
+            color: rgb(16, 42, 66);
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 1.6px;
+            line-height: 40px;
+            text-transform: capitalize;
+            padding-top: 6%;
+        }
+
         .absolute_bg {
             position: absolute;
             display: flex;
@@ -124,6 +144,7 @@
             opacity: 0;
             transition: opacity 300ms;
         }
+
 
 
     }

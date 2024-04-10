@@ -94,6 +94,10 @@
     padding-bottom: 2%;
 }
 
+.SinglePage_image {
+    margin-top: 3% !important;
+}
+
 /* button */
 
 .button-link_C {
@@ -101,7 +105,7 @@
     border-radius: 5px;
     color: white;
     text-decoration: none;
-    padding: 10px 15px 10px 15px;
+    padding: 7px 15px 7px 15px;
     cursor: pointer;
     font-size: 14px;
     font-weight: 400;
@@ -122,6 +126,9 @@
     font-size: 90%;
 }
 
+.Button_adjustment {
+    margin-top: -2% !important;
+}
 
 .product-center {
     grid-template-columns: 1fr 1fr;
@@ -155,11 +162,53 @@
     margin-left: 3%;
 }
 
-@media screen and (max-width:990px) {
+
+@media screen and (max-width:480px) {
+    .SinglePage_image .Box_pictures {
+        display: flex;
+        gap: 5px !important;
+    }
+
+    .flex_pictures {
+        width: 50px !important;
+        height: 50px !important;
+        object-fit: "cover" !important;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .container_section {
+        max-width: 990px;
+
+    }
+}
+
+@media screen and (max-width:801px) {
+    .content .number {
+        font-weight: 400;
+        color: rgb(16, 42, 66);
+        font-size: 40px !important;
+        font-weight: 700;
+        letter-spacing: 1.6px;
+        line-height: 32px;
+        margin-left: 3%;
+    }
+
+}
+
+@media screen and (max-width:991px) {
     .product-center {
         display: block !important;
         gap: 4rem;
         margin-top: 2rem;
+        padding: 0px 1rem !important;
+
+    }
+
+    .backbutton_style {
+        padding: 0px 1rem !important;
+
     }
 
     .content {
@@ -170,13 +219,14 @@
         font-size: 30px !important;
     }
 
-
-}
-
-@media screen and (max-width:570px) {
-    .page_singlePage {
-        margin-top: 5% !important;
-        padding: 0px 1rem !important;
+    .number {
+        font-weight: 400;
+        color: rgb(16, 42, 66);
+        font-size: 40px !important;
+        font-weight: 700;
+        letter-spacing: 1.6px;
+        line-height: 40px;
+        margin-left: 3%;
     }
 
 }

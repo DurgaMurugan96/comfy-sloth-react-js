@@ -78,3 +78,11 @@
 .color_adjustment {
     margin-left: -25%;
 }
+
+.active_btn .icon {
+    color: white;
+}
+
+.btn1.active {
+    text-decoration: underline;
+}

@@ -4,29 +4,46 @@ import { MdDelete } from "react-icons/md";
 import Footer from '../Footer';
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../../components/breadcrumbs/breadcrumbs';
+import { useDispatch } from 'react-redux';
+import { setCartDecrement, setCartDelete, setCartIncrement } from '../../store/slice/counterSlice';
+
 
 export default function Cart() {
+    const dispatch = useDispatch()
     const [cartItems, setCartItems] = useState([]);
     useEffect(() => {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         setCartItems(cart);
     }, []);
 
-    const handleDeleteItem = (index) => {
+    const handleDeleteItem = (index, quantity) => {
+        dispatch(setCartDecrement({ value: quantity }))
         const updatedCartItems = [...cartItems];
         updatedCartItems.splice(index, 1);
         setCartItems(updatedCartItems);
         localStorage.setItem('cart', JSON.stringify(updatedCartItems));
     };
 
-    const handleQuantityChange = (index, newQuantity) => {
+    const handleQuantityChange = (index, newQuantity, type) => {
+        switch (type) {
+            case 'inc':
+                dispatch(setCartIncrement({ value: 1 }))
+                break;
+            case 'dec':
+                dispatch(setCartDecrement({ value: 1 }))
+                break;
+            default:
+                break;
+        }
         const updatedCartItems = [...cartItems];
+        // dispatch(setCartIncrement({ value: newQuantity }))
         updatedCartItems[index].quantity = newQuantity;
         setCartItems(updatedCartItems);
         localStorage.setItem('cart', JSON.stringify(updatedCartItems));
     };
 
     const handleClearCart = (event) => {
+        dispatch(setCartDelete())
         event.preventDefault();
         setCartItems([]);
         localStorage.removeItem('cart');
@@ -43,7 +60,7 @@ export default function Cart() {
     }
 
     return (
-        <div>
+        <div className='cart_space'>
             {
                 cartItems?.length ? <>
                     <Breadcrumbs pages={'cart'} />
@@ -56,7 +73,7 @@ export default function Cart() {
                                 <th style={{ paddingRight: "70px" }}>Subtotal</th>
                             </tr>
                         </thead>
-                        <tr>
+                        <tr className='line_style'>
                             <td colSpan="5"><hr /></td>
                         </tr>
                         <tbody>
@@ -87,7 +104,6 @@ export default function Cart() {
                                                         }}
                                                     />
                                                 </div>
-
                                             </div>
                                         </div>
 
@@ -95,15 +111,16 @@ export default function Cart() {
                                     <td className='Price_C'>${covertPrice(item?.price)}</td>
                                     <td>
                                         <div className="quantity-control">
-                                            <button className="sign2" onClick={() => handleQuantityChange(index, item.quantity - 1)}>-</button>
+                                            <button className="sign2" onClick={() => handleQuantityChange(index, item.quantity - 1, 'dec')} disabled={item.quantity === 1}>-</button>
                                             <span className='number2'>{item.quantity}</span>
-                                            <button className="sign2" onClick={() => handleQuantityChange(index, item.quantity + 1)}>+</button>
+                                            <button className="sign2" onClick={() => handleQuantityChange(index, item.quantity + 1, 'inc')}>+</button>
                                         </div>
                                     </td>
+
                                     <td className='sub_c'>${covertPrice(item.price * item.quantity)}</td>
                                     <td>
-                                        <button className='bg_Color' onClick={() => handleDeleteItem(index)}>
-                                            <MdDelete style={{ color: "white", marginLeft: "15%" }} />
+                                        <button className='bg_Color' onClick={() => handleDeleteItem(index, item.quantity)}>
+                                            <MdDelete className="DeleteStyle" style={{ color: "white", marginLeft: "15%" }} />
                                         </button>
                                     </td>
                                 </tr>
@@ -119,7 +136,7 @@ export default function Cart() {
                         <Link className="Continue_style" to="/products">Continue Shopping</Link>
                         <button className="clear_Button" onClick={handleClearCart}>clear shopping cart</button>
                     </div>
-                    <section className='d-flex justify-content-end container Cart_Shipping'>
+                    <section className='container Cart_Shipping'>
                         <div >
                             <article className='border_CC'>
                                 <h5 className='CC sub_C1'> Subtotal: <span className='sub_C1'>${covertPrice(subtotal)}</span></h5>

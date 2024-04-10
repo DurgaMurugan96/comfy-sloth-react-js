@@ -1,13 +1,14 @@
 import './About.css'
 import Footer from "./Footer";
 import Breadcrumbs from "../components/breadcrumbs/breadcrumbs";
+import HeroImg1 from '../assets/Home1.jpeg';
 function About() {
     return (
         <>
             <Breadcrumbs pages={"about"} />
             <div className='container  about_container'>
                 <div className='mb-20 picture'>
-                    <img src="https://react-course-comfy-sloth-store.netlify.app/static/media/hero-bcg.a876f19f6786a3aca992.jpeg" className="pic" alt="alternative_text" />
+                    <img src={HeroImg1} className="pic" />
                 </div>
                 <div className='content'>
                     <h2 >Our Story </h2>

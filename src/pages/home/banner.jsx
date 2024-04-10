@@ -1,6 +1,9 @@
-
 import { Link } from 'react-router-dom'
 import './banner.scss'
+import HeroImg1 from '../../assets/Home1.jpeg';
+import HeroImg2 from '../../assets/Home2.jpeg';
+
+
 export default function Banner() {
     return (
 
@@ -16,9 +19,8 @@ export default function Banner() {
             </div>
             <div className='column2'>
                 <div className="box"></div>
-                <img src="https://react-course-comfy-sloth-store.netlify.app/static/media/hero-bcg.a876f19f6786a3aca992.jpeg" className='img_1' alt="alternative_text" />
-                <img src="https://react-course-comfy-sloth-store.netlify.app/static/media/hero-bcg-2.789918645915c8acb36f.jpeg" className='img_2' alt="alternative_text" />
-
+                <img src={HeroImg1} className='img_1' />
+                <img src={HeroImg2} className='img_2' />
             </div>
 
         </div>

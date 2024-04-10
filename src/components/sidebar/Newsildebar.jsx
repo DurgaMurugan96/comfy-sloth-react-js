@@ -174,7 +174,7 @@ export const FilterSection = ({ filterProducts, setFilterProducts = () => { } })
                 </select>
             </div>
 
-            <Color data={products} handleColorChange={handleColorChange} />
+            <Color data={products} handleColorChange={handleColorChange} activeColor={filters.color} />
 
             <div className="common_space">
                 <label>

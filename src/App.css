@@ -1,51 +1,3 @@
-.navbar .menu li {
-  list-style: none;
-  margin-top: 15%;
-}
-
-.logo_size {
-  width: 175px;
-  margin-left: -2%;
-}
-
-.menu1 a {
-  color: rgb(50, 77, 103);
-  text-decoration: none;
-  /* margin-left: -10%; */
-}
-
-.menu2 a {
-  color: rgb(16, 42, 66);
-  font-size: 24px;
-  line-height: 36px;
-  text-decoration: none;
-
-}
-
-.cart_icon {
-  margin-top: -8%;
-  width: 20px;
-  height: 20px;
-}
-
-.login_icon {
-  margin-top: -8%;
-  width: 20px;
-  height: 20px;
-}
-
-.com_container {
-  max-width: 1170px;
-  width: 100%;
-  margin: 0px auto;
-  padding: 5px;
-}
-
-.container {
-  max-width: 1140px;
-  width: 100%;
-}
-
 @keyframes spinner {
   to {
     transform: rotate(360deg);
@@ -63,24 +15,6 @@
   animation: spinner 0.6s linear infinite;
 }
 
-.menu1 {
-  position: relative;
-}
-
-.menu1::before {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #c5a491;
-}
-
-.menu1:hover::before {
-  width: 100%;
-}
-
 
 .Navbar_style .nav_content {
   padding: 20px;
@@ -91,6 +25,7 @@
 
 .Navbar_style .logo_size_icon {
   width: 175px;
+  margin-left: -26%;
 }
 
 .Navbar_style .nav-links {
@@ -99,6 +34,7 @@
   align-items: center;
   gap: 30px;
   list-style: none;
+  margin-top: 1%;
 }
 
 .Navbar_style .nav-links a {
@@ -108,6 +44,26 @@
   letter-spacing: 1.6px;
   line-height: 24px;
 }
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #c5a491;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+}
+
+
 
 .Navbar_style .cart_login {
   display: flex;
@@ -127,11 +83,28 @@
   letter-spacing: 1.6px;
 }
 
-
-
 .mob-menu-icon {
   display: none;
 }
+
+.cart_design {
+  background-color: #ab7a5f !important;
+  position: absolute;
+  margin-top: -43px;
+  margin-left: 71px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  color: white;
+  padding: 12px
+}
+
 
 @media screen and (max-width:1000px) {
   .Navbar_style {
@@ -164,8 +137,26 @@
     font-size: 20px;
   }
 
+  @media screen and (max-width:320px) {
+    .Navbar_style .nav_content {
+      margin-top: -9% !important;
+    }
 
+    .menu_icons {
+      margin-left: 70% !important;
+    }
 
+  }
 
+  @media screen and (max-width:600px) {
+    .Navbar_style .nav_content {
+      margin-top: -4%;
+    }
+  }
+}
 
+@media screen and (max-width:990px) {
+  .Navbar_style .nav_content {
+    margin-top: -4%;
+  }
 }
